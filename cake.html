@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blow the Candle</title>
+  <style>
+    body {
+      background: url('cele.png') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      font-family: Arial;
+      padding-top: 50px;
+    }
+    img { width: 450px; height: 350px; transition: opacity 0.5s ease; }
+    button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: #ffa500;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #ff7f00; }
+
+    /* Back button style */
+    .back-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #444;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <button class="back-button" onclick="history.back()">⬅ Back</button>
+
+  <h1>Happy bday once again..!🎉 first click the blow candle button🕯️ next cut the cake button🎂 after that get ur gift by clicking get a gift button..! 🎁</h1>
+
+  <img id="candle" src="cake3.png" alt="Cake with Candle">
+  <br>
+  <button onclick="blowCandle()">Blow Candle 🕯️</button>
+  <br><br>
+  <button onclick="cakecut()">Cut the Cake 🎂</button>
+  <br><br>
+  <button onclick="location.href='gift.html'">Get a Gift 🎁</button>
+
+  <script>
+    function blowCandle() {
+      const candleImg = document.getElementById('candle');
+      candleImg.style.opacity = 0;
+      setTimeout(() => {
+        candleImg.src = 'cake2.png';
+        candleImg.style.opacity = 1;
+        alert('🎉 Candle blown! Let\'s celebrate!');
+      }, 500);
+    }
+
+    function cakecut() {
+      const candleImg = document.getElementById('candle');
+      candleImg.style.opacity = 0;
+      setTimeout(() => {
+        candleImg.src = 'cake4.png';
+        candleImg.style.opacity = 1;
+        alert('🎉 cake cutted..! Let\'s celebrate!');
+      }, 500);
+    }
+  </script>
+</body>
+</html>
